@@ -39,6 +39,10 @@ public class Cliente {
         historial.add(turno);
     }
 
+    public Double calcularCostoTotalTurnos(){
+        return historial.stream().mapToDouble(Turno::getImporteTotal).sum();
+    }
+
     public String getNombre() {
         return nombre;
     }
